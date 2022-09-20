@@ -1,0 +1,15 @@
+type Client {
+  description: ID!
+  id: ID!
+  title: ID!
+}
+
+type Mutation {
+  createClient(description: String!, title: String!): Client!
+  updateClient(id: String!, description: String!, title: String!): Client!
+  deleteClient(id: String!): Client!
+}
+
+type Query {
+  clients: [Client!]!
+}
